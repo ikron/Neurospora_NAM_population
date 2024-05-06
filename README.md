@@ -91,4 +91,6 @@ Note that the .fastq files uploaded to SRA are the demultiplexed fastq files for
    - This uses the famXbams.list files to group families
 
 5. Genotyping family bams with GATK Unified Genotyper: file /RAD/GATKgenot.sh
-    - This genotypes the family based bam files and produces a .vcf file for the family
+    - This genotypes the family based bam files and produces a .vcf file for the family. These are used as input files in the next step
+
+6. 
