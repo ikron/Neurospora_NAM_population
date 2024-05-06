@@ -46,4 +46,30 @@ The script files are in folder /resequencing
 4. Consolidate the samples into a database: file/resequencing/db_import_natpop.sh and file /resequencing/db_import_update.sh
 5. Jointly call genotypes from the sample database: file /resequencing/genotypeGVCF_natpop.sh
 6. Postprocess the resulting VCF files: file /resequencing/postprocess_vcf_natpop.sh
+7. Further VCF post processing
+
+  -  Extract .gz file
+
+  -  Remove INFO.LEAC, INFO:MLEAF columns from vcf file using bcftools
+
+    ~/bcftools-1.11/bcftools annotate -x INFO/MLEAC,INFO/MLEAF all.samples.vcf -o all.samples.rm.vcf
+
+  -  For nat pop also run (PID column too long, and Neurospora is haploid anyway)
+
+    ~/bcftools-1.11/bcftools annotate -x FORMAT/PID all.samples.rm.vcf -o all.samples.rm2.vcf
+
+    ~/bcftools-1.11/bcftools annotate -x INFO/MLEAC,INFO/MLEAF,FORMAT/PID all.samples.vcf -o all.samples.natpop_comp.vcf
+
+ 8. Then make an indexed database from the resulting VCF file using wormtable
+
+  -  Convert to wormtable database
+
+    vcf2wt --truncate all.samples.rm.vcf allsamples.wt
+
+    wtadmin add allsamples.wt CHROM+POS
+
+  -  Can look what are the contents of wormtable columns with wtadmin show allsamples.wt
+
+9. Filter SNPs called by the GATK pipeline: file /resequencing/natpop_genotypes.py
+
 
