@@ -40,6 +40,8 @@ Like our previous work, we used a national supercluster (CSC) to process the sho
 
 The script files are in folder /resequencing
 
+### Analysis of resequencing data
+
 1. Map reads to to the reference genome using BWA: file /resequencing/mapping_array2.sh
 2. Postprocess the mapping files: file /resequencing/mapping_post.sh
 3. Use haplotypecaller in the GATK pipeline to call genotypes for each sample (GVCF file): file /resequencing/genotyping_array.sh
@@ -71,5 +73,6 @@ The script files are in folder /resequencing
   -  Can look what are the contents of wormtable columns with wtadmin show allsamples.wt
 
 9. Filter SNPs called by the GATK pipeline: file /resequencing/natpop_genotypes.py
+   - The output file from this step will be used in inferring genotypes of the offspring based on RAD-sequencing
 
-
+### Analysis of RAD-sequencing data
