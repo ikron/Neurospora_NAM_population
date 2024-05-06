@@ -33,7 +33,7 @@ Since the genomes of the parents are known from sequencing, we genotyped the off
 
 ### Genotype data file
 
-The current genotype data file can be found at:
+The current genotype data file can be found at: [Genotype file](10.5281/zenodo.11120317)
 
 ## Scripts
 
