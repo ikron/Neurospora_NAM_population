@@ -35,6 +35,8 @@ Since the genomes of the parents are known from sequencing, we genotyped the off
 
 The current genotype data file can be found at: [10.5281/zenodo.11120317](https://zenodo.org/records/11120317)
 
+Please note that this genotype file has been filtered based on minor allele frequency, and should NOT be used for population genetic analysis that use the site-frequency spectrum!
+
 ## Scripts
 Like our previous work, we used a national supercluster (CSC) to process the short read sequencing data. The script files have been mainly written so that they work on the cluster. If you want to use them, you have to modify them so that they work in your environment. Nevertheless you can extract the GATK, BWA etc. commands and run them on your system.
 
