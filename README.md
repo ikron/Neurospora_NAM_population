@@ -31,6 +31,10 @@ The natural strains have had their genomes re-sequenced with Illumina, and eithe
 
 Since the genomes of the parents are known from sequencing, we genotyped the offspring using RAD-sequencing and then identified where recombination breakpoints occurred based on the RAD-genotypes. Then we could infer their full SNP genotypes from the SNP genotypes of the parents. See [TPC GWAS preprint](https://www.biorxiv.org/content/10.1101/2024.04.29.591604v1) for details.
 
+### Genotype data file
+
+The current genotype data file can be found at:
+
 ## Scripts
 
 
