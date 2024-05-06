@@ -78,3 +78,17 @@ The script files are in folder /resequencing
 ### Analysis of RAD-sequencing data
 
 1. Clean and demultiplex RAD reads: file /RAD/cleanup.sh
+
+Note that the .fastq files uploaded to SRA are the demultiplexed fastq files for each sample
+
+2. Align RAD-reads to the reference genome: file /RAD/align.sh
+   - This uses the samplenames.txt to loop over all samples
+
+3. Add read groups to the samples: file /RAD/RGgenot.sh
+   - This uses the samplenamesfamX.txt files to process the different families
+
+4. Local indel realignment for all samples in the same family simultaneously: file /RAD/indelrealign.sh
+   - This uses the famXbams.list files to group families
+
+5. Genotyping family bams with GATK Unified Genotyper: file /RAD/GATKgenot.sh
+    - This genotypes the family based bam files and produces a .vcf file for the family
