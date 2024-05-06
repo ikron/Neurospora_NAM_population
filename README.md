@@ -94,4 +94,5 @@ Note that the .fastq files uploaded to SRA are the demultiplexed fastq files for
     - This genotypes the family based bam files and produces a .vcf file for the family. These are used as input files in the next step
 
 15. Process the vfamily-wise .vcf files and convert SNP calls into parent calls. Then infer the full SNP data for the offspring based on recombination breakpoints. File: /RAD/RADgeno.R
-   - This first produces family-wise genotype calls, and then these are subsequently used together with the hapmap data file from step 9. to produce the final genotype file
+   - This first produces family-wise genotype calls, and then these are subsequently used together with the hapmap data file from step 9. to produce a genotype file that includes all strains
+16. In the version 1.0 of the genotype file, the family E was not included in the study. The file: /RAD/SNPfiltering.R contains a script to filter out family E and produce the final genotype file
