@@ -43,7 +43,7 @@ The script files are in folder /resequencing
 1. Map reads to to the reference genome using BWA: file /resequencing/mapping_array2.sh
 2. Postprocess the mapping files: file /resequencing/mapping_post.sh
 3. Use haplotypecaller in the GATK pipeline to call genotypes for each sample (GVCF file): file /resequencing/genotyping_array.sh
-4. Consolidate the samples into a database: file /resequencing/genotypeGVCF_natpop.sh
-5. Jointly call genotypes from the sample database: file/
-6. Postprocess the resulting VCF files
+4. Consolidate the samples into a database: file/resequencing/db_import_natpop.sh and file /resequencing/db_import_update.sh
+5. Jointly call genotypes from the sample database: file /resequencing/genotypeGVCF_natpop.sh
+6. Postprocess the resulting VCF files: file /resequencing/postprocess_vcf_natpop.sh
 
