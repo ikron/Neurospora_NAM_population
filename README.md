@@ -77,20 +77,21 @@ The script files are in folder /resequencing
 
 ### Analysis of RAD-sequencing data
 
-1. Clean and demultiplex RAD reads: file /RAD/cleanup.sh
+10. Clean and demultiplex RAD reads: file /RAD/cleanup.sh
 
 Note that the .fastq files uploaded to SRA are the demultiplexed fastq files for each sample
 
-2. Align RAD-reads to the reference genome: file /RAD/align.sh
+11. Align RAD-reads to the reference genome: file /RAD/align.sh
    - This uses the samplenames.txt to loop over all samples
 
-3. Add read groups to the samples: file /RAD/RGgenot.sh
+12. Add read groups to the samples: file /RAD/RGgenot.sh
    - This uses the samplenamesfamX.txt files to process the different families
 
-4. Local indel realignment for all samples in the same family simultaneously: file /RAD/indelrealign.sh
+13. Local indel realignment for all samples in the same family simultaneously: file /RAD/indelrealign.sh
    - This uses the famXbams.list files to group families
 
-5. Genotyping family bams with GATK Unified Genotyper: file /RAD/GATKgenot.sh
+14. Genotyping family bams with GATK Unified Genotyper: file /RAD/GATKgenot.sh
     - This genotypes the family based bam files and produces a .vcf file for the family. These are used as input files in the next step
 
-6. 
+15. Process the vfamily-wise .vcf files and convert SNP calls into parent calls. Then infer the full SNP data for the offspring based on recombination breakpoints. File: /RAD/RADgeno.R
+   - This first produces family-wise genotype calls, and then these are subsequently used together with the hapmap data file from step 9. to produce the final genotype file
