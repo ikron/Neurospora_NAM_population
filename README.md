@@ -76,3 +76,5 @@ The script files are in folder /resequencing
    - The output file from this step will be used in inferring genotypes of the offspring based on RAD-sequencing
 
 ### Analysis of RAD-sequencing data
+
+1. Clean and demultiplex RAD reads: file /RAD/cleanup.sh
