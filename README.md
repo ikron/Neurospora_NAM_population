@@ -1,7 +1,7 @@
 # Neurospora nested association mapping population
 This page describes a _Neurospora crassa_ nested association mapping population we have developed. We plan to add more strains to this population to keep improving it.
 
-Last updated on 15.05.2024
+Last updated on 03.06.2024
 
 Version 1.0
 
@@ -27,7 +27,7 @@ Current stains numbers are:
 
 The natural strains have had their genomes re-sequenced with Illumina, and either by us, or other groups. See [TPC GWAS preprint](https://www.biorxiv.org/content/10.1101/2024.04.29.591604v1) for details.
 
-The re-sequencing data is available at SRA XXXXXXX (Note: submission to SRA had an error, it is currently being investigated).
+The re-sequencing data is available at SRA [PRJA1108904](https://www.ncbi.nlm.nih.gov/sra/?term=PRJA1108904) (Note: submission to SRA had an error, it is currently being investigated).
 
 ### RAD-sequencing the offspring
 
